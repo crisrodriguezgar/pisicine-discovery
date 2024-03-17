@@ -1,21 +1,9 @@
 #!/bin/bash
 
-if [ -z "$1" ]
-then
-	echo "No arguments supplied"
-fi
-
-if [ -n "$1" ]
-then
-	echo $1
-fi
-
-if [ -n "$2" ]
-then
-        echo $2
-fi
-
-if [ -n "$3" ]
-then
-        echo $3
+if [ $# -eq 0 ]; then
+    echo "No arguments supplied"
+else
+    for arg in "$@"; do
+        echo "$arg"
+    done
 fi

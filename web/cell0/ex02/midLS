@@ -1,2 +1,2 @@
-ls -A | grep -v '^\.' | tr '\n' ','
+ls -A | grep -v '^\.' | paste -sd, -
 
